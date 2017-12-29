@@ -1,2 +1,2 @@
 # Pype
-Secure peer-to-pear videocall service.
+Secure peer-to-peer videocall service.
