@@ -1,0 +1,49 @@
+# File name: app.py
+#:import rgba kivy.utils.rgba
+#:set gray rgba('#2C3E50')
+#:set green rgba('#2ECC71')
+#:set blue rgba('#3498DB')
+#:set purple rgba('#9B59B6')
+#:set dark_purple rgba('#8E44AD')
+#:set orange rgba('#E67E22')
+#:set dark_orange rgba('#D35400')
+
+<TextInput, Button>:
+	font_name: "Noto"
+	background_normal: ""
+	background_down: ""
+	foreground_color: 1,1,1,1
+	hint_text_color: 1,1,1,1
+	font_size: 40
+
+<LoginScreen>:
+	orientation: "vertical"
+	Title:
+		font_name: "Noto Bold"
+		canvas.before:
+			Color:
+				rgba: gray
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		text: "Welcome to Pype"
+		font_size: 72
+	TextInput:
+		background_color: green
+		hint_text: "Username"
+	TextInput:
+		background_color: blue
+		hint_text: "Password"
+		password: True
+	BoxLayout:
+		orientation: "horizontal"
+		Button:
+			background_color: purple
+			text: "Login"
+			on_press: self.background_color = dark_purple
+			on_release: self.background_color = purple
+		Button:
+			background_color: orange
+			text: "Register"
+			on_press: self.background_color = dark_orange
+			on_release: self.background_color = orange
