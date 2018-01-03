@@ -1,4 +1,5 @@
-"""Main Pype application program.
+"""
+Main Pype application program.
 """
 
 # Imports
